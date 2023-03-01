@@ -35,7 +35,7 @@ windows                  dangerous_paths netuse winpeas
 
 Si quieres leer una página, ejecuta:
 ```bash=
-❯ $> yeah mssql impacket-mssqlclient read
+❯ $> yeah read mssql/impacket-mssqlclient
 [+] Page information:
 
 # Connect SQL Server with Windows auth
@@ -54,10 +54,10 @@ Si quieres añadir una nueva página, ejecuta:
 ```bash=
 ❯ $> touch file
 ❯ ## yeah section_name page_name
-❯ $> yeah example test
+❯ $> yeah add example/test
 [!] Section does not exist!
 [!] Page does not exist!
-[?] Do you want to store 'touch file' in section 'example' and page 'test'? [y/n]: 
+[?] Do you want to store 'touch file' in section 'example/test'? [y/n]: 
 [?] Add a comment or leave it blank []: Test Comment
 [+] Section created!
 [+] Page created!
@@ -90,6 +90,7 @@ Cosas que te debes modificar del script:
 * Valor de la variable 'username'
 * Valor de la variable HISTFILE, que en el script por defecto está a ~/.zsh_history. Aproximadamente en la línea 102
 
+💡 Ahora tenemos también el script de autocomplete, que si lo copiamos en '/etc/bash_completion.d/' nos ayudará a navegar entre las diferentes opciones del script.
 💡 Yo tengo un alias en mi .zshrc con algo así:
 ```bash=
 alias yeah='/path/to/yeah.repo'
